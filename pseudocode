@@ -1,0 +1,17 @@
+// step 1 make a calculator object to encapsulate everything
+
+// step2:
+// function to initialize the program init() to tell which button has been clicked
+// and pass the value of that button to another function which deals with that value
+
+// step 3:
+// function send the value of the clicked button to
+// 1. handleSymbol function if it's a symbol
+// 2. handleNumber function if it's a number
+
+// step 4:
+// function to handel the button value if it's a number
+// function to handel the button value if it's a symbol
+
+// step 5:
+// function to display on screen rerender

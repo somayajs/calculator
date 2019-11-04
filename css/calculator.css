@@ -1,0 +1,130 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: arial,sans-serif;
+  font-size: 2.5rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc {
+  width: 99%;
+  /* height: 575px; */
+  border: 1px solid #E6C6C1;
+  padding: 10px 10px 0 10px;
+}
+.screen {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 45px;
+}
+.calc,
+.screen,
+.calc-button {
+  border-radius: 10px;
+  /* removing the blue outline around the button after clicked */
+  /* outline-color: #696969; */
+  /* outline-radius: 10px; */
+  outline: none;
+}
+.screen {
+  height: 85px;
+  border: 1px solid #E6C6C1;
+  color: #E6C6C1;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  /* I used display flex in screen div to center theier contents vertically */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cal-row {
+  display: flex;
+  justify-content: space-between;
+}
+.calc-button {
+  height: 23vw;
+
+  /* width: 100px; */
+  width: 24%;
+  /* height: auto; */
+  margin-bottom: 10px;
+  cursor: pointer;
+  /* remove the background form the buuttons */
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  background-color: #E6C6C1;
+  color: #505050;
+  border: 1px solid #E6C6C1;
+}
+.clear,
+.delete,
+.calc-button:last-child{
+  background-color: #fff;
+  color: #696969;
+}
+.clear {
+  flex: 0 0 49%;
+}
+.zero {
+  flex: 0 0 74%;
+}
+.cal-row .equals {
+  color: #1E1E1E;
+  background-color: #629980;
+  border: 1px solid #629980;
+}
+
+/* hover effect */
+.calc-button:hover {
+  background: #F2D1CB;
+}
+.clear:hover,
+.delete:hover,
+.calc-button:last-child:hover {
+  border: 1px solid #629980;
+  color: #E6C6C1;
+  background-color: #fff;
+}
+.cal-row .equals:hover {
+  background-color: #6AA68B;
+  color: #fff;
+}
+/* focus sffect */
+.calc-button:focus {
+  border-color: #696969;
+}
+.cal-row .equals:focus {
+  border-color: #000;
+}
+
+/* active effect */
+.calc-button:active {
+  background: #CCB0AB;
+}
+.clear:active,
+.delete:active,
+.calc-button:last-child:active {
+  background-color: #6AA68B;
+  color: #fff;
+}
+.cal-row .equals:active {
+  background-color: #52806B;
+}
+
+/* responsive */
+@media screen and (min-width: 460px) {
+  .calc {
+  width: 450px;
+  }
+  .calc-button {
+    height: 100px;
+  }
+}
+
